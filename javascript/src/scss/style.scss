@@ -1,0 +1,40 @@
+@use 'reset';
+@use 'variables';
+@use 'utils';
+@use 'header';
+@use 'forms';
+@use 'icons';
+@use 'card';
+
+:root {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: variables.$default--color;
+  //background-color: variables.$default--bg-color;
+  background: linear-gradient(variables.$teal--900, variables.$default--bg-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  & > footer {
+    margin-top: auto;
+  }
+}
+
+.results {
+  margin-top: variables.$default--content-gutter * 2;
+}
+
+
+

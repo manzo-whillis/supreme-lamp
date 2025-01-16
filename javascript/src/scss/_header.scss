@@ -1,0 +1,20 @@
+@use  'variables';
+
+.header {
+  padding-block: variables.$default--content-gutter;
+  margin-bottom: variables.$default--content-gutter * 4;
+
+  h1 {
+    font-family: "Playwrite AU SA", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,21 @@
+@use  'variables';
+
+.card {
+  border-radius: 8px;
+  font-size: 1.5rem;
+  border: 2px solid variables.$teal--900;
+  color: variables.$default--color;
+  text-align: center;
+}
+
+.card__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: variables.$default--content-gutter;
+  background-color: variables.$teal--900;
+}
+
+.card__info{
+  margin: 0;
+  padding: variables.$default--content-gutter;
+}

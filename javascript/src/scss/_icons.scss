@@ -1,0 +1,23 @@
+@use  'variables';
+
+.icon {
+  width: 0.75em;
+  width: 1cap;
+  height: 0.75em;
+  height: 1cap;
+}
+
+.with-icon {
+  display: inline-flex;
+  align-items: baseline;
+
+  .icon {
+    margin-inline-end: variables.$default--content-gutter;
+    fill: currentColor;
+  }
+
+  .icon--right {
+    margin-inline-start: variables.$default--content-gutter;
+    margin-inline-end: 0;
+  }
+}

@@ -1,0 +1,25 @@
+@use 'variables';
+
+.container {
+  width: min(variables.$default--content-max-width, 100% - (variables.$default--content-gutter * 2));
+  margin-inline: auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: variables.$default--content-gutter * 2;
+}
+
+.divider {
+  padding-bottom: 32px;
+  border-bottom: 2px solid variables.$teal--900;
+}

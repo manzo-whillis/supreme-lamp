@@ -1,0 +1,41 @@
+@use "sass:math";
+@use 'sass:color';
+@use  'variables';
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$default--content-gutter;
+
+  label {
+    font-family: "Playwrite AU SA", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+  }
+
+  input {
+    padding: math.div(variables.$default--content-gutter, 2);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    background-color: variables.$teal--900;
+    color: variables.$default--color;
+    border: none;
+  }
+}
+
+button {
+  display: block;
+  padding: variables.$default--content-gutter;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid variables.$teal--900;
+  width: 100%;
+  text-align: center;
+  background-color: variables.$teal--800;
+  color: variables.$default--color;
+}
