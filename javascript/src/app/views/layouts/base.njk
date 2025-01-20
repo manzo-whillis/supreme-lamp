@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/planet.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Numerologia</title>
+    <script defer src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA&family=Quicksand:wght@300..700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+{% include "partials/header.njk" %}
+
+<main role="main" class="container">
+    {% block content %}{% endblock %}
+</main>
+
+{% include "partials/footer.njk" %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="stack">
+        <form method="POST" action="/calculate">
+            <div class="stack">
+                <div class="stack">
+                    <div class="form__item">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form__item">
+                        <label for="middle-name">Secondo nome (opzionale)</label>
+                        <input type="text" name="middle-name" id="middle-name">
+                    </div>
+                    <div class="form__item divider">
+                        <label for="last-name">Cognome</label>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                    <div class="form__item divider">
+                        <label for="birth-date">Data di nascita</label>
+                        <input type="date" name="birth-date" id="birth-date">
+                    </div>
+                    <div class="form__item">
+                        <label for="city">Città</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <button id="show" type="submit">Calcola</button>
+                </div>
+            </div>
+        </form>
+        <div id="results">
+            {% include "partials/results.njk" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

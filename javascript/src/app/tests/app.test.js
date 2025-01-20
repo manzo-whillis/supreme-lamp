@@ -1,8 +1,8 @@
 import {test} from 'node:test';
 import {equal, deepEqual} from 'node:assert/strict';
-import {build} from './app.js';
+import {build} from '../app.js';
 
-test('Should have correct default options', async (t) => {
+test('Should have correct default options', async t => {
 	const app = await build();
 	t.after(async () => {
 		await app.close();
@@ -17,7 +17,7 @@ test('Should have correct default options', async (t) => {
 	deepEqual(await res.json(), {hello: 'world'});
 });
 
-test('Should handle errors', async (t) => {
+test('Should handle errors', async t => {
 	const app = await build();
 	t.after(async () => {
 		await app.close();
@@ -32,7 +32,7 @@ test('Should handle errors', async (t) => {
 	deepEqual(await res.json(), {'error':'I\'m sorry, there was an error processing your request.'});
 });
 
-test('Should handle errors', async (t) => {
+test('Should handle errors', async t => {
 	const app = await build();
 	t.after(async () => {
 		await app.close();

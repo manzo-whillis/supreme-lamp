@@ -3,7 +3,11 @@ const {KABOOM} = errors;
 
 export default async function (app, opts) {
 	app.get('/', (request, reply) => {
-		return {hello: 'world'};
+		const viewData = {
+			title: 'Numerologia'
+		};
+
+		return reply.view('pages/home.njk', viewData);
 	});
 
 	app.get('/error', (request, reply) => {
